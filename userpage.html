@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+             Note Log
+        </title>
+        <?php
+            include 'notestore.php'; 
+        ?>
+        <link href="./stylesheet.css" rel="stylesheet">
+        <script type="text/javascript">
+            window.history.forward();
+            function noBack()
+            {
+                window.history.forward();
+            }
+        </script>
+    </head>
+    <body onLoad="noBack();" onpageshow="if(event.persisted) noBack();" onUnload="">
+        <div class="MainSection">
+            <h2><strong>NOTED LOG</strong></h2>
+            <div class="HeaderSection">
+                <form method="POST" action="./eventshowdetails.php" id="noteform">
+                    <input style="color:blue;padding:10px;font-size:20px;display: inline;border:2px solid red;border-radius: 50px;background-color:paleturquoise;" type="submit" title="Show Log" name="submit-1" value="Show Log">
+                    <a style="color:blue;padding:10px;font-size:20px;display: inline;border:2px solid red;border-radius: 50px;background-color:paleturquoise;" title="Search Log" href="./searchlog.html" target="_self">Search Log</a>
+                <a style="float:right;padding:10px;font-size:20px;display: inline;border:2px solid red;border-radius: 50px;background-color: paleturquoise;color:solid blue;" title="sign out" href="./homepage.html" target="_self">Sign Out</a>
+                <a style="float:left;padding:10px;font-size:20px;display: inline;border:2px solid red;border-radius: 50%;background-color: paleturquoise;color:solid blue;" title="ADD LOG"  href="./addlog.html" target="_self"><b>+</b></a>
+                </form>     
+            </div>
+            <div class="FooterSection">   
+            </div>
+        </div>
+    </body>
+</html>
